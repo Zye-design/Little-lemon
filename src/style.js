@@ -24,7 +24,7 @@ const styles = {
   flexColStart: "flex flex-col sm:items-start items-center justify-center",
   flexColCenter: "flex flex-col items-center justify-center",
 
-  primaryText: "text-primary1 font-bold text-4xl",
+  primaryText: "text-primary1 font-bold ",
   secondaryText: "text-Highlight1 text-xl",
   orangeText: "text-primary2 font-semibold text-2xl",
 

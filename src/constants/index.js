@@ -13,62 +13,45 @@ import {
   BsFacebook,
   BsInstagram,
   BsPinterest,
+  BsFillTelephoneFill,
 } from "react-icons/bs";
+
 
 export const navLinks = [
   {
-    id: "home",
-    title: "Home",
+    id: 'home',
+    title: 'Home',
+    path: '/'
   },
   {
-    id: "about",
-    title: "About",
+    id: 'booking',
+    title: 'Reservation',
+    path: '/booking'
   },
   {
-    id: "menu",
-    title: "Menu",
+    id: 'menu',
+    title: 'Menu',
+    path: '/menu'
   },
   {
-    id: "reservations",
-    title: "Reservations",
-  },
-
-  {
-    id: "orderOnline",
-    title: "Order Online",
+    id: 'testimonials',
+    title: 'Testimonials',
+    path: '/testimonials'
   },
   {
-    id: "login",
-    title: "Login",
+    id: 'about',
+    title: 'About',
+    path: '/about'
   },
+  {
+    id: 'login',
+    title: 'Login',
+    path: '/login'
+  }
 ];
 
+
 export const footerLinks = [
-  {
-    title: "Useful Links",
-    links: [
-      {
-        name: "Login",
-        link: "https://www.littlelemon.com/Login/",
-      },
-      {
-        name: "Return policy",
-        link: "https://www.littlelemon.com/return-policy/",
-      },
-      {
-        name: "Reservations",
-        link: "https://www.littlelemon.com/reservations/",
-      },
-      {
-        name: "Order Online",
-        link: "https://www.littlelemon.com/Order-online/",
-      },
-      {
-        name: "Terms & Services",
-        link: "https://www.littlelemon.com/terms-and-services/",
-      },
-    ],
-  },
   {
     title: "Contact us",
     links: [
@@ -89,6 +72,32 @@ export const footerLinks = [
       },
     ],
   },
+  {
+    title: "Useful Links",
+    links: [
+      {
+        name: "Login",
+        link: "https://www.littlelemon.com/Login/",
+      },
+      {
+        name: "Return policy",
+        link: "https://www.littlelemon.com/return-policy/",
+      },
+      {
+        name: "Reservations",
+        link: "https://www.littlelemon.com/reservations/",
+      },
+      {
+        name: "Testimonials",
+        link: "https://www.littlelemon.com/Testimonials/",
+      },
+      {
+        name: "Terms & Services",
+        link: "https://www.littlelemon.com/terms-and-services/",
+      },
+    ],
+  },
+
   {
     title: "follow us",
     links: [
@@ -121,6 +130,7 @@ export const footerLinks = [
   },
 ];
 
+
 export const onlineMenu = [
   {
     title: "Greek Salad",
@@ -151,6 +161,67 @@ export const onlineMenu = [
   },
 
 ];
+
+export const socialMedia = [
+
+  {
+    id: "social-media-1",
+    icon: <BsFacebook size={16} />,
+    link: "https://www.facebook.com/",
+  },
+  {
+    id: "social-media-2",
+    icon: <BsInstagram size={16} />,
+    link: "https://www.instagram.com/",
+  },
+  {
+    id: "social-media-3",
+    icon: <BsFillTelephoneFill size={16} />,
+    link: "+2348168214500",
+  },
+  {
+    id: "social-media-4",
+    icon: <BsTwitter size={16} />,
+    link: "https://www.twitter.com/",
+  },
+  {
+    id: "social-media-5",
+    icon: <BsLinkedin size={16} />,
+    link: "https://www.linkedin.com/",
+  },
+];
+
+export const occasions = [
+
+  {
+    title: "Birthday",
+    name: "Birthday",
+  },
+  {
+    title: "Anniversary",
+    name: "Anniversary",
+  },
+  {
+    title: "Christmas Eve",
+    name: "Christmas Eve",
+  },
+  {
+    title: "Wedding",
+    name: "Wedding",
+  },
+  {
+    title: "Retirement Dinner",
+    name: "Retirement Dinner",
+  },
+  {
+    title: "Engagement Party",
+    name: "Engagement Party",
+  },
+
+
+];
+
+
 export const testimonials = [
   {
     rating: star,
@@ -178,5 +249,22 @@ export const testimonials = [
   },
 
 ];
+
+
+export const sliderSettings = {
+  slidesPerView: 1,
+  spaceBetween: 40,
+  breakpoints: {
+    480: {
+      slidesPerView: 1,
+    },
+    600: {
+      slidesPerView: 2,
+    },
+    968: {
+      slidesPerView: 3,
+    }
+  }
+}
 
 

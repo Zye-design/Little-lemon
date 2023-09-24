@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
-import Header from "./components/Header"
+import { BrowserRouter as Router } from 'react-router-dom';
 import Main from "./components/Main"
 import Footer from "./components/Footer"
 import styles from "./style";
+import Navbar from "./components/Navbar";
+
 
 
 const App = () => {
@@ -21,17 +23,20 @@ const App = () => {
   }, []);
 
   return (
-    <>
-      <div className={`${styles.paddingX} ${styles.flexCenter} `}>
+    <Router>
+      <div className={`${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
-          <Header isTopOfPage={isTopOfPage} />
+          <Navbar isTopOfPage={isTopOfPage} />
         </div>
       </div>
       <Main />
       <Footer />
+    </Router>
 
-    </>
   )
 }
 
 export default App
+
+
+

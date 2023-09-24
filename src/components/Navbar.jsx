@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import menu from "../assets/hamburgerMenu.svg";
 import close from "../assets/close.svg";
 import Logo from "../assets/Logo.svg";
@@ -14,7 +15,7 @@ const Navbar = ({ isTopOfPage }) => {
       className={`${navbarBackground} w-full flex py-6 justify-between items-center navbar `}
     >
       <div className="logo">
-        <a href="#">
+        <a href="/">
           <img src={Logo} alt="Little Lemon logo" />
         </a>
       </div>
@@ -28,25 +29,25 @@ const Navbar = ({ isTopOfPage }) => {
             } ${index === navLinks.length - 1 ? "mr-0 button" : "mr-10"}`}
             onClick={() => setActive(nav.title)}
           >
-            <a href={`#${nav.id}`} className="text-lg">
+            <Link to={nav.path} className="text-lg">
               {nav.title}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
-
       <div className="sm:hidden flex flex-1 justify-end items-center">
         <img
           src={toggle ? close : menu}
-          alt="menu"
+          alt="menu  bar"
           className="w-[28px] h-[28px] object-contain icon fill-Highlight1 stroke-secondary2"
-          onClick={() => setToggle(!toggle)}
+          onClick={() => {
+            setToggle(!toggle);
+          }}
         />
-
         <div
           className={`${
             !toggle ? "hidden" : "flex"
-          } p-6 bg-primary1 absolute z-10 top-20 ml-2 my-2 min-w-[140px] rounded-xl right-0 sidebar`}
+          } p-6 bg-primary2 absolute z-10 top-20 ml-2 my-2 min-w-[140px] rounded-xl right-0 sidebar`}
         >
           <ul
             className={`list-none flex justify-end items-start flex-1 flex-col `}
@@ -55,13 +56,17 @@ const Navbar = ({ isTopOfPage }) => {
               <li
                 key={nav.id}
                 className={` font-markazi font-medium cursor-pointer text-[16px] ${
-                  active === nav.title ? "text-primary2" : "text-Highlight1"
+                  active === nav.title ? "text-primary1" : "text-Highlight1"
                 } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
-                onClick={() => setActive(nav.title)}
+                onClick={() => {
+                  setActive(nav.title);
+                  setToggle(false);
+                }}
               >
-                <a href={`#${nav.id}`} className="text-lg">
+                <Link to={nav.path} className="text-lg">
+                  {" "}
                   {nav.title}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
